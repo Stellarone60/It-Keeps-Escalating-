@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class Playercontrol : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     Rigidbody2D rb;
 
@@ -43,7 +43,7 @@ public class Playercontrol : MonoBehaviour
 
         JumpInput();
 
-        ApplyAnimations();
+        //ApplyAnimations();
 
 
 
@@ -139,9 +139,9 @@ public class Playercontrol : MonoBehaviour
             idling = true;
         }
 
-        animator.SetBool("Jumping", jumping);
-        animator.SetBool("Idling", idling);
-        animator.SetBool("Running", running);
+        //animator.SetBool("Jumping", jumping);
+        //animator.SetBool("Idling", idling);
+        //animator.SetBool("Running", running);
     }
 
     public void RespawnAuto()
