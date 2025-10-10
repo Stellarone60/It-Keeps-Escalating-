@@ -12,6 +12,8 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
+    [SerializeField] float jumpAmount = 1;
+    private float currentJumpCount = 0;
 
     [SerializeField] bool grounded;
     [SerializeField] float castDist;
@@ -64,6 +66,7 @@ public class PlayerControl : MonoBehaviour
         if (Physics2D.BoxCast(transform.position, boxcastSize, 0f, Vector2.down, castDist, ~3))
         {
             grounded = true;
+            currentJumpCount = 0;
         }
         else
         {
@@ -78,9 +81,11 @@ public class PlayerControl : MonoBehaviour
 
     private void JumpInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && currentJumpCount < jumpAmount)
         {
             Jump(jumpForce);
+            currentJumpCount++;
+            
             //audioJump.Play();
             //hasJumped = true;
         }
