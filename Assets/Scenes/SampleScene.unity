@@ -239,7 +239,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -261,8 +261,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0048678843}
-  m_Size: {x: 0.9210193, y: 0.98973596}
+  m_Offset: {x: 0, y: -0.004419774}
+  m_Size: {x: 0.9210193, y: 0.9888397}
   m_Direction: 0
 --- !u!212 &1003302360
 SpriteRenderer:
@@ -325,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 1003302357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1701335, y: 0.1368, z: 0}
-  m_LocalScale: {x: 1, y: 1.9682, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -343,11 +343,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7dbe0581ea3a9448b44d1930059bd29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 4
   jumpForce: 450
+  jumpAmount: 2
   grounded: 0
-  castDist: 0
-  boxcastSize: {x: 0, y: 0}
+  castDist: 0.5
+  boxcastSize: {x: 0.5, y: 0.1}
 --- !u!1 &2027712677
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +362,7 @@ GameObject:
   - component: {fileID: 2027712680}
   - component: {fileID: 2027712681}
   - component: {fileID: 2027712682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
